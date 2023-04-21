@@ -1,1 +1,3 @@
-the Shopping Cart with React
+# The Shopping Cart with React
+
+Development stage

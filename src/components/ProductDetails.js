@@ -3,21 +3,21 @@ import { ProductsContext } from '../context/Products.context.provider'
 import { Link, useParams } from 'react-router-dom';
 
 
-export default function ProductDetails(props) {
+export default function ProductDetails() {
     const params = useParams();
     const data = useContext(ProductsContext);
     const product = data[params.id - 1];
-    const {title , price , category , image , description} = product;
+    
 
   return (
     <div>
-        <img src={image} alt="Product" style={{width: "200px"}} />
+        <img src={product && product.image} alt="Product" style={{width: "200px"}} />
         <div>
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <p><span>Category :</span> {category}</p>
+            <h3>{product && product.title}</h3>
+            <p>{product && product.description}</p>
+            <p><span>Category :</span> {product && product.category}</p>
             <div>
-                <span>{price}</span>
+                <span>{product && product.price}</span>
                 <Link to='products'>Back</Link>
             </div>
         </div>

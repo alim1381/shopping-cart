@@ -1,4 +1,5 @@
 import React , {useContext} from 'react'
+// Context
 import {ProductsContext} from '../context/Products.context.provider';
 import Product from './shared/Product';
 

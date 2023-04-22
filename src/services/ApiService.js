@@ -1,5 +1,6 @@
 import axios from "axios";
 
+//url
 const BASE_URL = "https://fakestoreapi.com";
 
 const getProducts = async (endPoint) => {

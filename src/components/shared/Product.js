@@ -5,6 +5,10 @@ import { shorten } from '../../helper/functions'
 import { Link } from 'react-router-dom'
 
 export default function Product({productData}) {
+  
+  // const clickHandler = event => {
+  //   dispatch(event);
+  // }
   return (
     <div style={{padding: "10px"}}>
         <img src={productData.image} alt="Product" style={{width: "200px" , height: "200px"}} />
@@ -13,7 +17,7 @@ export default function Product({productData}) {
         <div>
             <Link to={`/products/${productData.id}`}>Link</Link>
             <div>
-                <button>add to Cart</button>
+                <button >add to Cart</button>
             </div>
         </div>
     </div>

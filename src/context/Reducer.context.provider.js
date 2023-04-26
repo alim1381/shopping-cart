@@ -26,7 +26,8 @@ const cartReducer = (state , action) => {
             return {
                 ...state,
                 selectedItem : [...state.selectedItem],
-                ...sumItems(state.selectedItem)
+                ...sumItems(state.selectedItem),
+                checkout: false,
             }
         case "REMOVE_ITEM" :
             const newSelectedItem = state.selectedItem.filter(item => item.id !== action.payload.id )

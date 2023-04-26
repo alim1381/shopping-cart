@@ -2,6 +2,8 @@ import React, { useContext } from 'react'
 import { ProductsContext } from '../context/Products.context.provider'
 import { Link, useParams } from 'react-router-dom';
 
+// Styles 
+import styles from '../Styles/ProductDetails.module.css';
 
 export default function ProductDetails() {
     const params = useParams();
@@ -10,17 +12,19 @@ export default function ProductDetails() {
     
 
   return (
-    <div>
+    <div className={styles.container}>
+      <div className={styles.container2}>
         <img src={product && product.image} alt="Product" style={{width: "200px"}} />
-        <div>
+        <div className={styles.container3}>
             <h3>{product && product.title}</h3>
-            <p>{product && product.description}</p>
+            <p className={styles.des}>{product && product.description}</p>
             <p><span>Category :</span> {product && product.category}</p>
-            <div>
-                <span>{product && product.price}</span>
+            <div className={styles.buttons}>
+                <span>{product && product.price} $</span>
                 <Link to='products'>Back</Link>
             </div>
         </div>
+      </div>
     </div>
   )
 }

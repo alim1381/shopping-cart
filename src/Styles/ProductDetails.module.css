@@ -1,0 +1,42 @@
+.container {
+    margin-top: 140px;
+    
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.container2 {
+    border: 1px solid #4411b9;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    color: #381094;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 5px 10px #3600b377;
+    background:linear-gradient(#fff , #ece3ff);
+
+}
+
+.container3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+.des {
+    width: 800px;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.buttons a {
+    padding: 10px;
+    background-color: #4411b9;
+    color: #fff;
+    border-radius: 3px;
+    text-decoration: none;
+    margin-right: 10px;
+}

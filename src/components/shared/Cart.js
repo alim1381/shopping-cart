@@ -9,21 +9,24 @@ import {shorten} from '../../helper/functions'
 // Icons
 import trashIcon from '../../assets/icons/trash.svg'
 
+// Styles
+import styles from '../../Styles/Cart.module.css'
+
 export default function Cart(props) {
 
     const {image , title , price, quantity} = props.data;
     const {dispatch} = useContext(CartContext);
   return (
-    <div>
-        <img src={image} alt="Product" style={{width : "100px"}}/>
-        <div>
+    <div className={styles.container}>
+        <img className={styles.imageProduct} src={image} alt="Product" />
+        <div className={styles.titleContainer}>
             <h3>{shorten(title)}</h3>
             <p>{price} $</p>
         </div>
-        <div>
+        <div className={styles.spanContainer}>
             <span>{quantity}</span>
         </div>
-        <div>
+        <div className={styles.buttonsContainer}>
             {
                 quantity > 1 ?
                     <button onClick={() => dispatch({type : "DECRASE", payload : props.data})}>-</button> :

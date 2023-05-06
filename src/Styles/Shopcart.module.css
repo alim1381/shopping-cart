@@ -70,3 +70,19 @@
     color: #3700b3;
     margin-right: 40px;
 }
+@media (max-width : 1200px) {
+    .container {
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+    .buyYes {
+        margin-right: 0;
+    }
+    .buyNo {
+        margin-right: 0;
+    }
+    .checkout {
+        margin-right: 0;
+    }
+}
